@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Container, Form, Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import authService from '../services/authService';
-import { FcGoogle } from 'react-icons/fc'; // Import Google icon
 
 const Signup = () => {
     const [formData, setFormData] = useState({
@@ -137,14 +136,6 @@ const Signup = () => {
 
                         <Button variant="primary" type="submit" className="w-100 mb-3" style={{ backgroundColor: '#007bff', borderColor: '#007bff', borderRadius: '5px' }}> {/* Styled button */}
                             Create Account
-                        </Button>
-                        <div className="d-flex align-items-center my-3">
-                            <hr className="flex-grow-1" style={{ borderColor: '#ddd' }} />
-                            <span className="mx-2 text-muted">or</span>
-                            <hr className="flex-grow-1" style={{ borderColor: '#ddd' }} />
-                        </div>
-                        <Button variant="outline-dark" className="w-100 d-flex align-items-center justify-content-center" style={{ borderRadius: '5px' }}>
-                            <FcGoogle size={20} className="me-2" /> Continue with Google
                         </Button>
                         <p className="text-center mt-3 mb-0"> {/* Adjusted margin-bottom */}
                             Already have an account? <a href="/login" style={{ textDecoration: 'none', color: '#007bff' }}>Login</a>
